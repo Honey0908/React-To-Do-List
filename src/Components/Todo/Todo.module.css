@@ -1,0 +1,13 @@
+.todoText {
+  font-size: 19px;
+  font-weight: normal;
+  margin-bottom: 1.8rem;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todoImage {
+  max-height: 1.9rem;
+  max-width: 1.9rem;
+}

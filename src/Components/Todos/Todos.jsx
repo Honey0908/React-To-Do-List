@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import styles from '../css/Todos.module.css'
-import checkedImg from '../assets/checked.png'
-import unCheckedImg from '../assets/unchecked.png'
+import styles from './Todos.module.css'
+import Todo from '../Todo/Todo'
 
 function Todos() {
 
@@ -12,8 +11,9 @@ function Todos() {
     { task: "bring flowers", complete: false, id: 4 },
   
   ]
-  const [todos, setTodo] = useState(InitialTodos)
 
+
+  const [todos, setTodo] = useState(InitialTodos)
 
   const handleChange = (todoId) => {
     const updatedTodos = todos.map((todo) => {
@@ -23,24 +23,18 @@ function Todos() {
       return todo;
     })
     setTodo(updatedTodos)
-
   }
 
 
   return (
     <div className={styles.todo_area}>
+
       {todos && todos.map((todo) => {
         return (
-          <p className={styles.todoText} key={todo.id}>
-            <span className={todo.complete ? "font_secondary" :""}>{todo.task}</span>
-            <img className={styles.todoImage}
-            src={todo.complete ? checkedImg : unCheckedImg}
-            alt={todo.complete ? "Checked" : "Unchecked"}
-            onClick={() => handleChange(todo.id)}
-          />
-          </p>
+          <Todo key={todo.id} todo={todo} handleChange={handleChange}/>
         )
-      })}
+      })
+      }
     </div>
   )
 }

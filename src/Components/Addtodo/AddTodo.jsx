@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styles from '../css/AddTodo.module.css'
+import styles from './AddTodo.module.css'
 
 class AddTodo extends Component {
     render(){
