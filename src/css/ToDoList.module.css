@@ -1,0 +1,13 @@
+#main_container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  max-width: 20rem;
+  height: 35rem;
+  margin: 0 auto;
+  color: rgb(77, 77, 77);
+  padding: 45px;
+  position: relative;
+  box-shadow: 2px 2px 6px 2px rgb(213, 213, 213);
+  margin-top: 5rem;
+}

@@ -1,0 +1,13 @@
+.addBtn {
+  bottom: -6%;
+  position: absolute;
+  font-size: 2.5rem;
+  color: #94949c;
+  border-radius: 50%;
+  background-color: #5ad3a0;
+  width: 5.5rem;
+  padding: 0;
+  height: 5.5rem;
+  align-self: center;
+  outline: none;
+}
