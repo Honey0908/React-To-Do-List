@@ -25,12 +25,12 @@ function DateHeader() {
       <div className={styles.inner_div_for_date +` d-flex`}>
         <h1>{day}</h1>
         <div>
-          <div className='fw-500 pb-2'>{month.toUpperCase()}</div>
+          <div className='fw-600 pb-2'>{month.toUpperCase()}</div>
           <div>{year}</div>
         </div>
       </div>
       <div>
-        <h3 className="fw-bold"> {dayOfWeek.toUpperCase()}</h3>
+        <h3 className="fw-600"> {dayOfWeek.toUpperCase()}</h3>
       </div>
     </div>
   );
