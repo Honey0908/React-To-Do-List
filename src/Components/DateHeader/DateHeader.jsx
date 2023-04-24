@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styles from './DateHeader.module.css';
 
+
+/* Date Header shows Today's Date  */
 class DateHeader extends Component {
   constructor(props) {
     super(props);
@@ -28,6 +30,7 @@ class DateHeader extends Component {
   }
 
   render() {
+
     const { day, year, month, dayOfWeek } = this.state;
 
     return (

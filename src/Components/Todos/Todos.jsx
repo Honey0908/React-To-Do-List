@@ -14,7 +14,7 @@ function Todos() {
 
   ]
 
-  const { todos, toggleTodo } = useContext(TodoContext);
+  const { todos, toggleTodo, removeTodo } = useContext(TodoContext);
 
   // const [todos, setTodo] = useState(InitialTodos)
 
@@ -22,7 +22,14 @@ function Todos() {
     toggleTodo(todoId);
   }
 
+  const handleRemove = (todoId) => {
+    removeTodo(todoId)
+  }
+
+  // completed Tasks are checked tasks
   const completedTasks = todos.filter((todo) => todo.completed)
+
+  // uncompleted tasks are unchecked tasks
   const unCompletedTasks = todos.filter((todo) => !todo.completed)
 
   return (
@@ -35,15 +42,16 @@ function Todos() {
 
 
           {completedTasks.map(todo => (
-            <Todo key={todo.id} todo={todo} handleChange={handleChange} />
+            <Todo key={todo.id} todo={todo} handleChange={handleChange} removeTodo={handleRemove} />
           ))}
 
           {unCompletedTasks.map(todo => (
-            <Todo key={todo.id} todo={todo} handleChange={handleChange} />
+            <Todo key={todo.id} todo={todo} handleChange={handleChange} removeTodo={handleRemove} />
           ))}
 
         </>
       ) : (
+
         <NoTask />
       )}
 
