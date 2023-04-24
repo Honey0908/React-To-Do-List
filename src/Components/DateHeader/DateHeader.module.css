@@ -11,5 +11,11 @@
 }
 
 .inner_div_for_date h1 {
-  margin-right: 5px;
+  margin-right: 8px;
+}
+
+.inner_div_for_date div {
+  display: flex;
+  flex-direction: column;
+  line-height: 22px;
 }

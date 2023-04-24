@@ -16,3 +16,22 @@
 .addBtn:hover {
   background-color: rgb(102, 231, 175);
 }
+
+.addInput {
+  position: absolute;
+  bottom: 4%;
+  padding: 5px 10px;
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 5px;
+  right: 0;
+  left: 0;
+  margin-inline: 45px;
+  font-size: 18px;
+}
+
+input:invalid {
+  outline-color: rgb(255, 147, 147);
+}
+input:valid {
+  outline-color: #45cf93;
+}
