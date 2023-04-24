@@ -1,0 +1,18 @@
+.addBtn {
+  bottom: -6%;
+  position: absolute;
+  font-size: 2.9rem;
+  color: #aeaeae;
+  border-radius: 50%;
+  background-color: #56e4a7;
+  width: 5.5rem;
+  padding: 0;
+  height: 5.5rem;
+  align-self: center;
+  outline: none;
+  border: none;
+}
+
+.addBtn:hover {
+  background-color: rgb(102, 231, 175);
+}
