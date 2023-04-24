@@ -7,7 +7,7 @@ function NoTask() {
 
         <div className={styles.noTaskDiv}>
             <h2 className={styles.noTaskHeading}>Done for Today</h2>
-            <img src="src/assets/completeTaks.png" alt="" height="250px" />
+            <img src="./src/assets/completeTaks.png" alt="" height="250px" />
         </div>
 
     )

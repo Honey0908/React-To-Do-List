@@ -2,7 +2,7 @@
 
 This is a simple todo list application built with React. It allows users to add new tasks to the list, mark tasks as completed, and delete tasks from the list. It also set expiration for the next day to remove data from local storage. So all the tasks will be cleared on the next day
 
-[Deploy Link](https://feature--visionary-melba-1a082d.netlify.app/)
+[Deploy Link](https://earnest-gumption-e2baa1.netlify.app/)
 
 ![TodoList UI](/public/TodoList.png)
 
