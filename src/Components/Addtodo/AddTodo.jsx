@@ -24,7 +24,7 @@ const AddTodo = () => {
     /* if user press Enter then Input will be added to the list if it has a value */
     if (event.key === 'Enter') {
 
-      if (newTodo.current.value === '') {
+      if (newTodo.current.value.trim() === '') {
         setError("Please Enter Valid Task")
         return;
       }
