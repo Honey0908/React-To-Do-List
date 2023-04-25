@@ -38,13 +38,8 @@ input:valid {
 
 .errorText {
   position: absolute;
-  display: none;
   bottom: 1%;
   font-size: small;
   color: rgb(255, 75, 75);
   font-family: "Arial";
-}
-
-input:focus:invalid + .errorText {
-  display: block;
 }
