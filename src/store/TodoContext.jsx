@@ -22,13 +22,13 @@ const TodoContextProvider = (props) => {
         localStorage.setItem('expiration', expiration.getTime());
     }
 
-    // if todos are modified then it will set to localstorage
+    /* if todos are modified then it will set to localstorage */
     useEffect(() => {
         localStorage.setItem('todos', JSON.stringify(todos));
     }, [todos]);
 
 
-    // check every second if todos are expired or not
+    /* check every second if todos are expired or not */
     useEffect(() => {
 
         const interval = setInterval(() => {

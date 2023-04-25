@@ -3,7 +3,7 @@ import styles from './AddTodo.module.css'
 import { TodoContext } from '../../store/TodoContext'
 
 /* AddTodo is used to add new Todo task into list */
-function AddTodo() {
+const AddTodo = () => {
 
   // addTodo function from global context
   const { addTodo } = useContext(TodoContext);
@@ -15,7 +15,7 @@ function AddTodo() {
   const newTodo = useRef('');
 
 
-  // handle pressed keys on the input
+  /* handle pressed keys on the input */
   const handleNewTodoKeyDown = (event) => {
 
 
@@ -23,14 +23,11 @@ function AddTodo() {
     if (event.key === 'Enter') {
 
       if (newTodo.current.value === '') {
-        newTodo.current.reportValidity();
         return;
-
       }
 
       /*passed new todo task to  Global Context add Function */
       addTodo({ task: newTodo.current.value, completed: false, id: Math.floor(Math.random() * 1000) });
-
       newTodo.current.value = ""
       return;
 
@@ -48,8 +45,11 @@ function AddTodo() {
   }
 
 
+
+
   return (
-    <>
+    <React.Fragment>
+
       {toggleAddButton ? (
         <>
 
@@ -63,6 +63,9 @@ function AddTodo() {
             required
             maxLength="28"
           />
+
+          {<div className={styles.errorText}>Please Enter Valid Task</div>}
+
         </>
 
       ) : (
@@ -72,7 +75,8 @@ function AddTodo() {
         </button>
 
       )}
-    </>
+
+    </React.Fragment>
   )
 
 }

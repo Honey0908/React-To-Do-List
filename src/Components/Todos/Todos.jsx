@@ -6,19 +6,10 @@ import NoTask from '../NoTask.jsx/NoTask'
 
 function Todos() {
 
-  const InitialTodos = [
-    { task: "Buy Ice Cream", complete: false, id: 1 },
-    { task: "Do not fall asleep", complete: false, id: 2 },
-    { task: "read an article", complete: true, id: 3 },
-    { task: "bring flowers", complete: false, id: 4 },
-
-  ]
 
   const { todos, toggleTodo, removeTodo } = useContext(TodoContext);
 
-  // const [todos, setTodo] = useState(InitialTodos)
-
-  const handleChange = (todoId) => {
+  const handleToggleImage = (todoId) => {
     toggleTodo(todoId);
   }
 
@@ -40,19 +31,19 @@ function Todos() {
       {todos.length > 0 ? (
         <>
 
-
           {completedTasks.map(todo => (
-            <Todo key={todo.id} todo={todo} handleChange={handleChange} removeTodo={handleRemove} />
+            <Todo key={todo.id} todo={todo} handleToggleImage={handleToggleImage} removeTodo={handleRemove} />
           ))}
 
           {unCompletedTasks.map(todo => (
-            <Todo key={todo.id} todo={todo} handleChange={handleChange} removeTodo={handleRemove} />
+            <Todo key={todo.id} todo={todo} handleToggleImage={handleToggleImage} removeTodo={handleRemove} />
           ))}
 
         </>
       ) : (
 
         <NoTask />
+
       )}
 
 

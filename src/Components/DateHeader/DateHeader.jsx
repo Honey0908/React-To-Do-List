@@ -35,6 +35,7 @@ class DateHeader extends Component {
 
     return (
       <div className={styles.container}>
+
         <div className={styles.inner_div_for_date + ` d-flex`}>
           <h1>{day}</h1>
           <div>
@@ -45,6 +46,7 @@ class DateHeader extends Component {
         <div>
           <h3 className="fw-600">{dayOfWeek.toUpperCase()}</h3>
         </div>
+
       </div>
     );
   }

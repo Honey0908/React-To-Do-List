@@ -35,3 +35,16 @@ input:invalid {
 input:valid {
   outline-color: #45cf93;
 }
+
+.errorText {
+  position: absolute;
+  display: none;
+  bottom: 1%;
+  font-size: small;
+  color: rgb(255, 75, 75);
+  font-family: "Arial";
+}
+
+input:focus:invalid + .errorText {
+  display: block;
+}
