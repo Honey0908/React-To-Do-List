@@ -1,13 +1,30 @@
 .todoText {
   font-size: 19px;
   font-weight: normal;
-  margin-bottom: 1.8rem;
-  margin-top: 0;
+  margin: 0;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .todoImage {
   max-height: 1.9rem;
   max-width: 1.9rem;
+}
+
+.todo {
+  overflow-x: auto;
+  margin-bottom: 1.7rem;
+}
+
+.todoText span {
+  margin-right: 10px;
+}
+
+.deletebutton {
+  color: red;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }

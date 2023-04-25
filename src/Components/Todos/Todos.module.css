@@ -1,4 +1,4 @@
 .todo_area {
-  overflow: auto;
+  overflow-y: auto;
   margin-bottom: 1.5rem;
 }
