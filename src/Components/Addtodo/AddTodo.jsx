@@ -11,6 +11,8 @@ const AddTodo = () => {
   // state to toggle add button and input
   const [toggleAddButton, settoggleAddButton] = useState(false);
 
+  const [error, setError] = useState(null)
+
   // reference to input of add newTodo 
   const newTodo = useRef('');
 
@@ -23,6 +25,7 @@ const AddTodo = () => {
     if (event.key === 'Enter') {
 
       if (newTodo.current.value === '') {
+        setError("Please Enter Valid Task")
         return;
       }
 
@@ -44,6 +47,11 @@ const AddTodo = () => {
     settoggleAddButton(!toggleAddButton)
   }
 
+  const handleInputChange = (event) => {
+    if (event.target.value) {
+      setError(null);
+    }
+  }
 
 
 
@@ -62,9 +70,10 @@ const AddTodo = () => {
             autoFocus
             required
             maxLength="28"
+            onChange={handleInputChange}
           />
 
-          {<div className={styles.errorText}>Please Enter Valid Task</div>}
+          {<div className={styles.errorText}>{error}</div>}
 
         </>
 
