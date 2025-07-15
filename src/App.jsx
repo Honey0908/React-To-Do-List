@@ -24,7 +24,7 @@ function App() {
         onChange={(e) => setInput(e.target.value)}
         placeholder="Add a task"
       />
-      <button onClick={addTask}>Add</button>
+      <button onClick={addTask}>Add TODO</button>
       <ul>
         {tasks.map((task, idx) => (
           <li key={idx}>
