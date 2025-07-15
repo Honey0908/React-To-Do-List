@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>To-Do List</h1>
+      <h1>To-Do Lists</h1>
       <input
         value={input}
         onChange={(e) => setInput(e.target.value)}
