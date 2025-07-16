@@ -27,13 +27,13 @@ function App() {
       <button onClick={addTask}>Add TODO 2</button>
       <ul>
         {tasks.map((task, idx) => (
-          <li key={idx}>
+          <li key={index}>
             {task}
-            <button onClick={() => removeTask(idx)}>Delete</button>
+            <button onClick={() => removeTask(index)}>Delete</button>
           </li>
         ))}
       </ul>
-      <h1>commit 6</h1>
+      <h1>commit 7</h1>
     </div>
   );
 }
